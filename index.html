@@ -1,0 +1,317 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kiran Velpula Portfolio!</title>
+        <link href="https://fonts.googleapis.com/css2?family=VT323&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            :root {
+                --bg-primary: #f4f4f9;
+                --bg-secondary: #e6e6fa;
+                --text-primary: #4a4a8a;
+                --text-secondary: #6a5acd;
+                --accent-color: #8a2be2;
+                --highlight-color: #9370db;
+                --game-tile-bg: #d8bfd8;
+                --game-tile-hover: #dda0dd;
+            }
+    
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+    
+            body, html {
+                font-family: 'VT323', monospace;
+                line-height: 1.6;
+                color: var(--text-primary);
+                background-color: var(--bg-primary);
+                height: 100%;
+            }
+    
+            .portfolio-container {
+                max-width: 900px;
+                margin: 0 auto;
+                background-color: white;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+    
+            /* Header Section */
+            .header {
+                display: flex;
+                align-items: center;
+                padding: 2rem;
+                background-color: var(--bg-secondary);
+            }
+    
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 2rem;
+                border: 4px solid var(--accent-color);
+            }
+    
+            .header-content {
+                flex-grow: 1;
+            }
+    
+            .name {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--text-primary);
+                font-family: 'Courier Prime', monospace;
+            }
+    
+            .summary {
+                color: var(--text-secondary);
+                margin-top: 0.5rem;
+            }
+    
+            /* Scene Section */
+            .scene-container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: var(--bg-primary);
+                padding: 4rem 2rem;
+            }
+    
+            .scene {
+                width: 100%;
+                max-width: 800px;
+                text-align: center;
+            }
+    
+            .paragraph {
+                font-size: 24px;
+                line-height: 1.6;
+                color: var(--text-primary);
+                font-family: 'VT323', monospace;
+            }
+            .highlight-word {
+                position: relative;
+                display: inline-block;
+                transition: all 0.3s ease;
+            }
+    
+            .highlight-word .highlight-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 100%;
+                background-color: var(--highlight-color);
+                z-index: -1;
+                transition: width 0.3s ease;
+            }
+    
+            .highlight-word.active {
+                background-color: var(--highlight-color);
+                color: white;
+            }
+    
+            .highlight-word.active .highlight-overlay {
+                width: 100%;
+            }
+    
+            /* Sections */
+            .sections {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                padding: 2rem;
+                background-color: var(--bg-secondary);
+            }
+    
+            .section {
+                display: flex;
+                align-items: center;
+                background-color: white;
+                border-radius: 8px;
+                padding: 2rem;
+                box-shadow: 
+                    4px 4px 0 var(--accent-color),
+                    8px 8px 0 var(--text-secondary);
+                transform: translate(-4px, -4px);
+            }
+    
+            .section:hover {
+                transform: translate(-8px, -8px);
+                box-shadow: 
+                    8px 8px 0 var(--accent-color),
+                    12px 12px 0 var(--text-secondary);
+            }
+    
+            .section-label {
+                flex: 0 0 200px;
+                color: var(--text-secondary);
+                font-family: 'Courier Prime', monospace;
+                font-size: 1.5rem;
+                margin-right: 2rem;
+                border-right: 3px solid var(--accent-color);
+                padding-right: 1rem;
+            }
+    
+            .section-content {
+                flex-grow: 1;
+            }
+    
+            .portfolio-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+    
+            .portfolio-item {
+                background-color: var(--bg-primary);
+                border-radius: 8px;
+                padding: 1rem;
+                text-align: center;
+                transition: transform 0.3s ease;
+            }
+    
+            .portfolio-item:hover {
+                transform: scale(1.05);
+            }
+    
+            .footer {
+                background-color: var(--bg-secondary);
+                padding: 2rem;
+                text-align: center;
+            }
+        </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <!-- Header Section -->
+        <div class="header">
+            <img src="IMG_3103.jpg" alt="Profile" class="profile-image">
+            <div class="header-content">
+                <h1 class="name">Kiran Velpula</h1>
+                <p class="summary">Data Analyst and Scientist | Data Enthusiast | Incredible Storyteller</p>
+            </div>
+        </div>
+
+        <!-- Scroll Highlight Scene -->
+        <div class="scene-container">
+            <div class="scene">
+                <p class="paragraph">
+                    Purple elephants dance on marshmallow clouds, 
+                    <span class="highlight-word">
+                        <span class="highlight-overlay"></span>
+                        <span class="word">I</span>
+                    </span> 
+                    <span class="highlight-word">
+                        <span class="highlight-overlay"></span>
+                        <span class="word">turn</span>
+                    </span> 
+                    <span class="highlight-word">
+                        <span class="highlight-overlay"></span>
+                        <span class="word">your</span>
+                    </span> 
+                    quantum equations. 
+                    <span class="highlight-word">
+                        <span class="highlight-overlay"></span>
+                        <span class="word">data</span>
+                    </span> 
+                    negotiates with sentient staplers, 
+                    <span class="highlight-word">
+                        <span class="highlight-overlay"></span>
+                        <span class="word">into</span>
+                    </span> 
+                    creating melodic 
+                    <span class="highlight-word">
+                        <span class="highlight-overlay"></span>
+                        <span class="word">insights</span>
+                    </span> 
+                    of pure absurdity.
+                </p>
+            </div>
+        </div>
+
+        <!-- Sections -->
+        <div class="sections">
+            <div class="section about">
+                <div class="section-label">About</div>
+                <div class="section-content">
+                    <p>My journey Started in 2020 whilst I was doing a project with NLP and python on sentiment analysis. Now I am a passionate creative developer with a knack for transforming complex data into compelling narratives. Bridging the gap between technology and storytelling.</p>
+                </div>
+            </div>
+
+            <div class="section projects">
+                <div class="section-label">Projects</div>
+                <div class="section-content portfolio-grid">
+                    <a href="https://github.com/beekiran00/FPL-team-builder"><div class="portfolio-item">FPL Team Builder - A Tableau Dashboard To Build Fantasy Football Teams</div></a>
+                    <a href="https://github.com/beekiran00/El-Nino-Weather-Pridction"><div class="portfolio-item">Weather Prediction Using Distributed Systems</div></a>
+                    <a href="https://github.com/beekiran00/Benchmarking-DTC-DNN-and-Transformer-ML-Models"><div class="portfolio-item">Benchmarking DTC, GNN, and Transformer Models</div></a>
+                    <a href="https://medium.com/@beekiran00"><div class="portfolio-item">My Blogs</div></a>
+                </div>
+            </div>
+
+            <div class="section skills">
+                <div class="section-label">Skills</div>
+                <div class="section-content">
+                    <ul>
+                        <li>Impeciable Data Visualization - PowerBI, Tableau</li>
+                        <li>SQL, Python, ML Models, R, Spark and Distributed Computing, Azure</li>
+                        <li>Interactive Storytelling</li>
+                        <li>Design Thinking</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section experience">
+                <div class="section-label">Experience</div>
+                <div class="section-content">
+                    <p>Data Analyst: H&T Group PLC - May 23 to Current</p>
+                    <p>Data Scientist: Spirto OU(contract) - Sept 22 to Dec 22</p>
+                    <p>Machine Learning Engineer: Kaedim 3D(intern) - Jul 22 to Aug 22</p>  
+                </div>
+            </div>
+
+            <div class="section achievements">
+                <div class="section-label">Achievements</div>
+                <div class="section-content">
+                    <p>DoE Bronze and Silver Awards, 2 Research paper publications and on a personal note: I wanted to try make podcasts so I did. I wanted to try Youtube channel so I did. Self-proclaimed professional cyclist with a medal from Ford Ride London 24. I run sometimes, I climb boulders, I play basketball. Self-proclaimed 
+                        connoisseur of food and drink.</p>
+                </div>
+            </div>
+
+            <div class="section contact">
+                <div class="section-label">Contact</div>
+                <div class="section-content">
+                    <a href="www.linkedin.com/in/bhanu-kiran-b501a61b8"><p> Click get in touch for collaborations, interesting projects, or just to say hello!</p></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2025 Kiran Velpula &#10084;. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        const highlightWords = document.querySelectorAll('.highlight-word');
+
+        window.addEventListener('scroll', () => {
+            const windowHeight = window.innerHeight;
+
+            highlightWords.forEach((wordElement) => {
+                const rect = wordElement.getBoundingClientRect();
+                
+                // Check if the word is near the middle of the viewport
+                if (rect.top < windowHeight * 0.7 && rect.bottom > windowHeight * 0.3) {
+                    wordElement.classList.add('active');
+                } else {
+                    wordElement.classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
